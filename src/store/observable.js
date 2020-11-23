@@ -13,13 +13,6 @@ const initialState = {
 
 let state = initialState;
 
-setInterval(() => {
-    if (dataStore.updateData) {
-        subject.next(state);
-        dataStore.updateData = false;
-    }
-}, 100); // Display object should not be emitted more often than every 100ms
-
 const dataStore = {
     updateData: false,
     timerTemp: null,
@@ -29,7 +22,12 @@ const dataStore = {
         dataStore.updateData = (state.data.pressure !== null) && (state.data.temp !== null) && (state.data.humidity !== null);  // All 3 systems must emit at least one value before 1 display object is ever sent to the dashboard.
     },
     init: () => {
-       // dataStore.emit(state);
+        setInterval(() => {
+            if (dataStore.updateData) {
+                subject.next(state);
+                dataStore.updateData = false;
+            }
+        }, 100); // Display object should not be emitted more often than every 100ms
     },
     subscribe: setState => subject.subscribe(setState),
     receiveTemp: temp => {
