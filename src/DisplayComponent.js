@@ -1,12 +1,11 @@
 import React, { useState, useLayoutEffect } from 'react';
+import {useObservable} from './store/observable';
 import dataStore from './store/observable';
 
 export const DisplayComponent = (props) => {
     const [measures, setMeasures] = useState(useState(dataStore.initialState));
-    useLayoutEffect(()=> {
-        dataStore.subscribe(setMeasures);
-        dataStore.init();
-    },[]);
+
+    const observable = useObservable(setMeasures);
 
     return (
         <div className="DisplayComponent">

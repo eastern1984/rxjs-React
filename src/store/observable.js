@@ -1,3 +1,4 @@
+import React, {useEffect} from 'react';
 import { Subject } from 'rxjs';
 
 const subject = new Subject();
@@ -12,6 +13,22 @@ export const initialState = {
 
 export let state = initialState;
 
+export const useObservable = (setter) => {
+    let subscription;
+    let interval;
+
+    useEffect(() => {
+        subscription = dataStore.subscribe(setter);
+        interval = dataStore.init();
+
+        return () => {
+            subscription.unsubscribe();
+            clearInterval(interval);
+        }
+    },[])
+};
+
+
 const dataStore = {
     updateData: false,
     timerTemp: null,
@@ -21,7 +38,7 @@ const dataStore = {
         dataStore.updateData = (state.data.pressure !== null) && (state.data.temp !== null) && (state.data.humidity !== null);  // All 3 systems must emit at least one value before 1 display object is ever sent to the dashboard.
     },
     init: () => {
-        setInterval(() => {
+        return setInterval(() => {
             if (dataStore.updateData) {
                 subject.next(state);
                 dataStore.updateData = false;
