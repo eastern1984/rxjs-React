@@ -2,7 +2,7 @@ import { Subject } from 'rxjs';
 
 const subject = new Subject();
 
-const initialState = {
+export const initialState = {
     data: {
         pressure: null,
         temp: null,
@@ -10,7 +10,7 @@ const initialState = {
     }
 };
 
-let state = initialState;
+export let state = initialState;
 
 const dataStore = {
     updateData: false,
