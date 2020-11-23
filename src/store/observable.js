@@ -1,5 +1,4 @@
 import { Subject } from 'rxjs';
-import { debounce } from 'rxjs/operators';
 
 const subject = new Subject();
 
@@ -63,6 +62,8 @@ const dataStore = {
 function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
 }
+
+// Backend imitation
 
 (function temploop() {
     const rand = getRandomArbitrary(100, 2000);
