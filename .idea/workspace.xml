@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b8c05e13-efb6-45a3-bd69-caab388b1694" name="Default Changelist" comment="">
+    <list default="true" id="b8c05e13-efb6-45a3-bd69-caab388b1694" name="Default Changelist" comment="refactor. Use custom hook for observable">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DisplayComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DisplayComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/observable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/observable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606132974673</updated>
       <workItem from="1606132977188" duration="2044000" />
-      <workItem from="1606147902683" duration="14258000" />
+      <workItem from="1606147902683" duration="15256000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1606158328446</created>
@@ -94,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606161135033</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactor. Use custom hook for observable">
+      <created>1606162370042</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1606162370042</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,20 +111,25 @@
     <MESSAGE value="update" />
     <MESSAGE value="test display component" />
     <MESSAGE value="test for observable" />
-    <option name="LAST_COMMIT_MESSAGE" value="test for observable" />
+    <MESSAGE value="refactor. Use custom hook for observable" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor. Use custom hook for observable" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="591" y="27" key="CommitChangelistDialog2" timestamp="1606161134474">
+    <state x="591" y="27" key="CommitChangelistDialog2" timestamp="1606162587569">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="591" y="27" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606161134474" />
+    <state x="591" y="27" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606162587569" />
+    <state x="188" y="85" key="DiffContextDialog" timestamp="1606162577886">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="188" y="85" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606162577886" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1606149146283">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606149146283" />
-    <state x="552" y="248" key="Vcs.Push.Dialog.v2" timestamp="1606161140955">
+    <state x="552" y="248" key="Vcs.Push.Dialog.v2" timestamp="1606162374574">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606161140955" />
+    <state x="552" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606162374574" />
   </component>
 </project>
